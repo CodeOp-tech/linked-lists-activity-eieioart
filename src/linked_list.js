@@ -18,8 +18,9 @@ class LinkedList {
 
   // adds a node to the tail of the list
   addToTail(val) {
-    this.tail.next = new Node(val);
-    this.tail = this.tail.next;
+    let newNode = new node(val);
+    this.tail.next = newNode;
+    this.tail = newNode;
   }
 
   // returns the total number of nodes in the list
@@ -28,7 +29,6 @@ class LinkedList {
     let size = 1;
 
     while (currentNode !== this.tail) {
-      currentNode = currentNode.next;
       size++;
     }
 
@@ -38,18 +38,36 @@ class LinkedList {
   // WARM UP
 
   // returns the value of the head of the linked list
-  headValue() {}
+  headValue() {
+    return this.head.value;
+  }
 
   // returns the value of the tail of the linked list
-  tailValue() {}
+  tailValue() {
+    return this.tail.value;
+  }
 
   // returns the value of the node that comes after the head
-  nextToHead() {}
+  nextToHead() {
+    return this.head.next;
+  }
 
   // MAIN EXERCISES
 
   // returns the NODE stored at the Nth index position of the list
-  getNthNode(index) {}
+  getNthNode(index) {
+    //initialize node to be first node
+    let node = this.head;
+    //initialize ix to be 0
+    let ix = 0;
+    //while (there is a node and 'ix' is less than 'index')
+    while (node !== null && ix < index) {
+      //if 'ix' equals 'index'
+      // return 'node'
+      //advance 'node'
+    }
+    //return null
+  }
 
   // removes the node assigned to the tail
   removeFromTail() {}
